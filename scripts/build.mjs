@@ -130,7 +130,7 @@ const html = `<!doctype html>
   <footer class="footer"><div class="wrap"><p>Layout inspired by <a href="https://embodiment-adaptation.github.io/">Rapid Embodiment Adaptation</a>.</p><p><a href="https://github.com/Lgx521/paper-website-template">Paper website template</a><span aria-hidden="true"> · </span><a href="#top">Back to top</a></p></div></footer>
 </body>
 </html>
-`;
+`.replace(/[\t ]+$/gm, '');
 const check = process.argv.includes('--check');
 for (const [file, contents] of [['index.html', html], ['citation.bib', `${paper.bibtex || ''}\n`]]) {
   const dest = path.join(root, file);
