@@ -1,6 +1,6 @@
 # Paper Website Template
 
-一个简洁的论文项目网页模板，采用 HKUST 蓝金配色，搭配 HKUST 与 SUSTech 标志。
+一个简洁的论文项目网页模板，采用金色标题、黑色正文与系统字体，搭配 HKUST 与 SUSTech 标志。
 
 ![桌面版：标题、作者、学校标志和项目视频区域](docs/previews/desktop.jpg)
 

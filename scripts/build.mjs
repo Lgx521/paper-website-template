@@ -93,7 +93,7 @@ const html = `<!doctype html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#003366">
+  <meta name="theme-color" content="#c59114">
   <title>${escape(title)}</title>
   <meta name="description" content="${escape(paper.description)}">
   <meta property="og:type" content="article">
