@@ -17,6 +17,7 @@
 - SUSTech 只保留火炬和大字，右侧小字英文全称已裁掉。
 - 两个标志已按用户要求缩至之前的约 70%：桌面宽度分别为 182 px、175 px，图片框高度 49 px。保持矢量比例，不拉伸。
 - 示例内容必须明确标为占位；不要虚构作者、发表信息、实验结论、DOI 或 arXiv 编号。
+- 媒体采用个人主页式的简洁排版：图片和视频直接展示，图注在下方左对齐。占位区只用浅灰底和一行简短标识，不添加装饰边框、角标、说明堆叠或假播放按钮；章节通过留白区分。
 
 ## 本地预览
 
@@ -49,7 +50,7 @@ git commit -m "Add paper content"
 git push
 ```
 
-不要在修改配置后忘记重新生成页面。CI 会检查 `index.html` 与配置是否一致。也可以运行 `npm run build` / `npm run check`；无需安装包。
+修改配置或样式后都需要重新生成页面；生成器会按 CSS 内容更新样式链接的版本号，避免浏览器继续显示旧缓存。CI 会检查 `index.html` 与配置、样式是否一致。也可以运行 `npm run build` / `npm run check`；无需安装包。
 
 ### 常改字段
 
@@ -139,7 +140,7 @@ styles.css              # 配色、排版和响应式布局
 main.js                 # 渐进增强：BibTeX 复制
 citation.bib            # 自动生成的可下载引用
 assets/logos/           # HKUST 与 SUSTech 矢量标志
-assets/figures/          # 方法示意图占位；替换为论文图片
+assets/figures/          # 放论文图片
 assets/videos/          # 放视频和字幕
 scripts/build.mjs       # 无依赖页面生成器
 scripts/check.mjs       # 检查本地文件、锚点与基本 HTML 结构

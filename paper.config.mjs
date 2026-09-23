@@ -29,7 +29,6 @@ export default {
   teaser: {
     type: 'placeholder', // placeholder | image | video | youtube
     label: 'Project video',
-    hint: 'A short visual introduction to your research.',
     caption: 'An overview of the problem, the proposed method, and the main result.',
     // 图片：type: 'image', src: 'assets/figures/teaser.jpg', alt: '描述图片内容'
     // 本地视频：type: 'video', src: 'assets/videos/teaser.mp4', poster: 'assets/figures/poster.jpg'
@@ -42,27 +41,27 @@ export default {
     {
       id: 'problem', title: 'Problem',
       paragraphs: ['What makes this problem difficult? Describe the setting, the assumptions, and the gap that motivates your work. Use the figure below to make the research question concrete.'],
-      media: [{ type: 'placeholder', label: 'Problem illustration', hint: 'Research setting · Key challenge · Desired outcome', caption: 'Figure 1. Introduce the problem and highlight the challenge addressed by your method.', aspect: 'wide' }],
+      media: [{ type: 'placeholder', label: 'Problem illustration', caption: 'Figure 1. Introduce the problem and highlight the challenge addressed by your method.', aspect: 'wide' }],
     },
     {
       id: 'method', title: 'Method',
-      paragraphs: ['Introduce the main idea of your approach. Explain the role of each component and how they work together. Replace the example pipeline with your own architecture, algorithm, or system overview.'],
-      media: [{ type: 'image', src: 'assets/figures/method-placeholder.svg', alt: 'Example pipeline with three stages: input, proposed method, and output.', caption: 'Figure 2. An example pipeline layout. Replace it with the method figure from your paper.' }],
+      paragraphs: ['Introduce the main idea of your approach. Explain the role of each component and how they work together. Add a figure showing your architecture, algorithm, or system overview.'],
+      media: [{ type: 'placeholder', label: 'Method figure', caption: 'Figure 2. Overview of the proposed method.', aspect: 'wide' }],
     },
     {
       id: 'simulation', title: 'Simulation Performance',
       paragraphs: ['Describe the benchmarks, evaluation metrics, and comparison methods. Explain the main trend shown in each plot and report the evidence that supports your conclusions.'],
       media: [
-        { type: 'placeholder', label: 'Main results', hint: 'Benchmark or performance plot', caption: '(a) Main quantitative comparison.', aspect: 'plot' },
-        { type: 'placeholder', label: 'Ablation study', hint: 'Contribution of individual components', caption: '(b) Ablation or sensitivity analysis.', aspect: 'plot' },
+        { type: 'placeholder', label: 'Main results', caption: '(a) Main quantitative comparison.', aspect: 'plot' },
+        { type: 'placeholder', label: 'Ablation study', caption: '(b) Ablation or sensitivity analysis.', aspect: 'plot' },
       ],
       columns: 2,
     },
     {
       id: 'real-world', title: 'Real-World Performance',
       experiments: [
-        { title: 'Experiment 1', paragraphs: ['Introduce the first experimental setting. State the task, conditions, and the behavior readers should look for in the demonstration.'], media: [{ type: 'placeholder', label: 'Experiment video', hint: 'Demonstration or side-by-side comparison', caption: 'Describe the experimental conditions and what the demonstration shows.', aspect: 'video' }] },
-        { title: 'Experiment 2', paragraphs: ['Use a second experiment to show generalization, robustness, or a different task. Include representative successes and limitations where appropriate.'], media: [{ type: 'placeholder', label: 'Additional results', hint: 'A second experiment or qualitative figure', caption: 'Explain how this experiment complements the first result.', aspect: 'wide' }] },
+        { title: 'Experiment 1', paragraphs: ['Introduce the first experimental setting. State the task, conditions, and the behavior readers should look for in the demonstration.'], media: [{ type: 'placeholder', label: 'Experiment video', caption: 'Describe the experimental conditions and what the demonstration shows.', aspect: 'video' }] },
+        { title: 'Experiment 2', paragraphs: ['Use a second experiment to show generalization, robustness, or a different task. Include representative successes and limitations where appropriate.'], media: [{ type: 'placeholder', label: 'Additional results', caption: 'Explain how this experiment complements the first result.', aspect: 'wide' }] },
       ],
     },
   ],

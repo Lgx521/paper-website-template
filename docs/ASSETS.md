@@ -6,12 +6,13 @@ Retrieved / prepared on 2026-09-21.
 
 - Reference: https://embodiment-adaptation.github.io/
 - Retained the centered academic header, institutional logo row, resource pills, leading video, abstract, problem, method, simulation / real-world results, takeaways, and citation structure.
-- HTML, CSS, JavaScript, and the example pipeline diagram were implemented for this template. Original paper text, figures, videos, and commercial Graphik font files are not redistributed.
+- HTML, CSS, and JavaScript were implemented for this template. Original paper text, figures, videos, and commercial Graphik font files are not redistributed.
+- Media presentation follows the user's personal website: flat, unframed images and video, left-aligned captions, and a 40 px gap between desktop columns. Placeholder panels use a single short label on `#F3F3F3`, with no decorative corners or stacked instructions.
 
 ## Colors and typography
 
 - Gold: `#C59114`, RGB 197 / 145 / 20, explicitly requested by the user to match the [reference project page](https://embodiment-adaptation.github.io/). This replaces the earlier HKUST official gold choice.
-- Page titles, section / experiment headings, and figure-placeholder headings use this gold. Other page text uses `#000000`; university logo artwork retains its original colors.
+- Page titles and section / experiment headings use this gold. Other page text, including the small media placeholder labels, uses `#000000`; university logo artwork retains its original colors.
 - The font stack matches the user's personal website repository `Lgx521.github.io-main`, `assets/css/site-shell.css` (`--site-font`): `-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif`.
 - Heading weights follow `assets/css/site-pages.css`: 600 for the main title, 500 for section and experiment headings. BibTeX keeps its monospace stack.
 - The font comes from the reader's operating system; no font files or external font services are required.

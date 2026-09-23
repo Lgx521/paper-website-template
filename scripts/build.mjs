@@ -1,9 +1,11 @@
 import { readFile, writeFile } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import paper from '../paper.config.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
+const stylesheetVersion = createHash('sha256').update(await readFile(path.join(root, 'styles.css'))).digest('hex').slice(0, 12);
 const escape = (value = '') => String(value).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 const text = value => escape(value).replace(/\n/g, '<br>');
 const url = (value = '') => {
@@ -44,9 +46,7 @@ function media(item) {
       break;
     case 'placeholder':
       content = `<div class="media-placeholder aspect-${['video', 'wide', 'plot'].includes(item.aspect) ? item.aspect : 'video'}">
-        <span class="placeholder-label">${escape(item.label || 'Research figure')}</span>
-        ${item.hint ? `<span class="placeholder-hint">${escape(item.hint)}</span>` : ''}
-        <span class="placeholder-tag">MEDIA PLACEHOLDER</span>
+        <span>${escape(item.label || 'Research figure')} · placeholder</span>
       </div>`;
       break;
     default: throw new Error(`Unknown media type: ${item.type}`);
@@ -104,7 +104,7 @@ const html = `<!doctype html>
   ${paper.socialImage ? `<meta property="og:image" content="${url(paper.socialImage)}">` : ''}
   <meta name="twitter:card" content="${paper.socialImage ? 'summary_large_image' : 'summary'}">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=${stylesheetVersion}">
   <script type="application/ld+json">${JSON.stringify(jsonLd).replace(/</g, '\\u003c')}</script>
   <script src="main.js" defer></script>
 </head>
